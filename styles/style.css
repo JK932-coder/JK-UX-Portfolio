@@ -1,8 +1,8 @@
 :root {
   --hero-color: #e4e1eb; 
-  --branding-color:#6C63FF;
+  --branding-color: #6C63FF;
   --heading-font-family: "Playfair Display", serif;
-  --default-font-family:"Poppins", serif;
+  --default-font-family: "Poppins", serif;
 }
 
 h1, h3, h4, h5 {
@@ -14,10 +14,12 @@ h1, h3, h4, h5 {
 h1 {
   font-size: 86px;
 }
+
 h2 {
   font-size: 24px;
   color: #272142;
 }
+
 p, h2 {
   font-family: var(--default-font-family);
   font-weight: normal;
@@ -29,9 +31,11 @@ h3 {
 
 p {
   font-size: 16px;
-  line-height: 1.5px;
+  line-height: 1.5; /* Ensure proper line height */
   text-align: center;
+  word-wrap: break-word; /* Ensure words wrap within the container */
 }
+
 h5 {
   text-align: center;
   font-size: 36px;
@@ -41,15 +45,16 @@ h5 {
   background-color: var(--hero-color);
   text-align: center;
   padding: 160px 20px;
-
 }
+
 .hero p {
   font-size: 36px;
   font-weight: bold;
   margin: 0;
 }
+
 .btn-hero {
-  background-color: #6C63FF;
+  background-color: var(--branding-color);
   color: white;
   border-radius: 4px;
   font-family: var(--default-font-family); 
@@ -59,8 +64,8 @@ h5 {
   padding: 18px 30px;
   line-height: 27px;
 }
-.btn-branding-outline {
 
+.btn-branding-outline {
   color: var(--branding-color);
   border: 1px solid var(--branding-color);
   border-radius: 4px;
@@ -73,22 +78,68 @@ h5 {
 }
 
 .medium-img {
-    width: 75%;
-    height: auto;
+  width: 75%;
+  height: auto;
+}
+
+.card-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Remove fixed height */
+  padding: 20px; /* Add padding for spacing */
+}
+
+.card-img-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; 
+}
+
+.footer {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
   }
 
-   .card-img-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px; 
+  h2 {
+    font-size: 20px;
   }
 
-  .card-img-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; 
+  .hero p {
+    font-size: 24px;
   }
-  .footer {
+
+  .card-body {
     text-align: center;
   }
+
+  .btn-hero {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .btn-branding-outline {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  /* Ensure paragraph text wraps into two lines */
+  .card-text {
+    max-width: 100%; /* Adjust as needed */
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-text {
+    max-width: 80%; /* Adjust as needed */
+    margin: 0 auto;
+  }
+}
