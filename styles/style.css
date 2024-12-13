@@ -44,7 +44,7 @@ h5 {
 .hero {
   background-color: var(--hero-color);
   text-align: center;
-  padding: 160px 20px;
+  padding: 120px 20px;
 }
 
 .hero p {
@@ -63,6 +63,11 @@ h5 {
   font-style: normal;
   padding: 18px 30px;
   line-height: 27px;
+}
+
+.btn-hero :hover {
+  background-color: white;
+  color: var(--branding-color);
 }
 
 .btn-branding-outline {
@@ -105,11 +110,11 @@ h5 {
 /* Media queries for responsive design */
 @media (max-width: 768px) {
   h1 {
-    font-size: 48px;
+    font-size: 36px;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .hero p {
@@ -135,11 +140,45 @@ h5 {
     max-width: 100%; /* Adjust as needed */
     margin: 0 auto;
   }
+  .about-me {
+    text-align: center;
+    padding: 0;
+  }
+  .about-me h1 {
+    font-size: 48px;
+  }
+  .about-me h2 {
+    font-size: 36px;
+  }
 }
 
 @media (max-width: 576px) {
   .card-text {
     max-width: 80%; /* Adjust as needed */
     margin: 0 auto;
+}
+    .about-me {
+    text-align: center;
+    padding: 0;
   }
+  }
+
+.about-me {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.about-me h1 {
+  font-size: 36px;
+  line-height: 1.5;
+  font-family: var(--default-font-family);
+}
+
+.about-me h2 {
+  font-size: 20px;
+  font-family: var(--default-font-family);
+}
+
+.profile {
+  padding-left: 35px;
 }
