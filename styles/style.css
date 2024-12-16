@@ -212,3 +212,22 @@ nav a {
 nav a:hover, nav li.active a {
   color: var(--branding-color);
 }
+
+.social {
+  font-size: 45px;
+  color: var(--branding-color);
+  padding: 20px;
+  transition: all 150ms ease-in-out;
+
+}
+
+ .fa-linkedin:hover {
+            color: white; 
+            background-color: var(--branding-color);
+        }
+
+        .fa-envelope:hover {
+            color: white;  
+            background-color: var(--branding-color);
+        }
+
