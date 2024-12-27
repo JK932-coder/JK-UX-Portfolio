@@ -247,24 +247,25 @@ nav a:hover, nav li.active a {
 }
 
 .social {
-  font-size: 45px;
-  color: var(--branding-color);
-  padding: 20px;
-  transition: all 150ms ease-in-out;
-
+  color: #0077b5; /* LinkedIn blue color */
+  font-size: 98px; /* Adjust the size as needed */
+  margin: 0 10px; /* Add space between icons */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
 
- .fa-linkedin:hover {
-            color: white; 
-            background-color: var(--branding-color);
-        }
-
-        .fa-envelope:hover {
-            color: white;  
-            background-color: var(--branding-color);
-        }
          .row-cols-1 {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
+.social-icon {
+  color: var(--branding-color);
+  font-size: 45px; 
+  margin: 0 10px; 
+  transition: color 0.3s ease, background-color 0.3s ease; 
+}
+
+.social-icon:hover {
+  color: white; 
+  background-color: var(--branding-color); 
+}
