@@ -1,5 +1,5 @@
 :root {
-  --hero-color: #e4e1eb; 
+  --hero-color: #fae7cb;
   --branding-color: #6C63FF;
   --heading-font-family: "Playfair Display", serif;
   --default-font-family: "Poppins", serif;
@@ -41,10 +41,28 @@ h5 {
   font-size: 36px;
 }
 
+nav li {
+  display: inline;
+  list-style: none;
+  line-height: 40px;
+  margin-left: 20px; 
+}
+
+nav a {
+  text-decoration: none; 
+  color: #272142; 
+  opacity: 70%;
+  transition: all 100ms ease-in-out;
+}
+
+nav a:hover, nav li.active a {
+  color: var(--branding-color); 
+}
+
 .hero {
   background-color: var(--hero-color);
   text-align: center;
-  padding: 120px 20px;
+  padding: 60px 20px;
 }
 
 .hero p {
@@ -70,35 +88,47 @@ h5 {
   color: var(--branding-color);
 }
 
-.btn-branding-outline {
-  color: var(--branding-color);
-  border: 1px solid var(--branding-color);
-  border-radius: 4px;
-  font-family: var(--default-font-family); 
-  font-size: 18px;
-  line-height: 27px;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: center;
-}
+ .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+
+     .card-body {
+      flex: 1;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: auto;
+    }
 
 .medium-img {
   width: 75%;
   height: auto;
+  display: block;
+  margin-right: 0 auto;
 }
 
-.card-img-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto; /* Remove fixed height */
-  padding: 20px; /* Add padding for spacing */
-}
 
 .card-img-container img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain; 
+}
+
+.card-img-top {
+  height: 80%;
 }
 
 .footer {
@@ -107,7 +137,9 @@ h5 {
   padding-bottom: 40px;
 }
 
-/* Media queries for responsive design */
+
+
+
 @media (max-width: 768px) {
   h1 {
     font-size: 36px;
@@ -130,12 +162,6 @@ h5 {
     padding: 12px 24px;
   }
 
-  .btn-branding-outline {
-    font-size: 16px;
-    padding: 12px 24px;
-  }
-
-  /* Ensure paragraph text wraps into two lines */
   .card-text {
     max-width: 100%; /* Adjust as needed */
     margin: 0 auto;
@@ -150,6 +176,14 @@ h5 {
   .about-me h2 {
     font-size: 36px;
   }
+
+  .row-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .row-cols-md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 576px) {
@@ -161,8 +195,7 @@ h5 {
     text-align: center;
     padding: 0;
   }
-  }
-
+  
 .about-me {
   text-align: center;
   padding: 120px 20px;
@@ -230,4 +263,8 @@ nav a:hover, nav li.active a {
             color: white;  
             background-color: var(--branding-color);
         }
+         .row-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
